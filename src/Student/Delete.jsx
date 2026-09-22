@@ -18,13 +18,13 @@ const Delete = () => {
          BackendAi.delete(getId.stuId)
          .then((e) => {
             alert("UPDATE SUCCESS!!");
-            console.log("UPDATE SUSSESS:", e)
+            console.log("DELETE SUSSESS:", e)
              usenagivate("/fetch");
              setId(({stuId:""}))
             })
          .catch((e) => {
             alert("UPDATE ERROR!!")
-            console.log("UPDATE ERROR:",e)
+            console.log("DELETE ERROR:",e)
             });
     }
 
