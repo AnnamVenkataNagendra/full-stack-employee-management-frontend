@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import BackendApi from '../BackEndApi/FrontEndApi.jsx'
 const UserRegister = () => {
 
-    const [getName,setName]=useState({stuName:" ", stuPass:"",stuCollege:"", stuLocation:""})
+    const [getName,setName]=useState({stuName:"", stuPass:"",stuCollege:"", stuLocation:""})
 
     const [getSuccess, setSuccess]=useState(false);
 
