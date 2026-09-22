@@ -16,16 +16,16 @@ const Delete = () => {
          e.preventDefault();
 
          BackendAi.delete(getId.stuId)
-         .then((e)=>{
-            console.log(e);
-            alert('student id deleted');
-           setId({ stuId: "" })
-           usenagivate("/fetch")
-         })
-         .catch((e)=>{
-            console.log(e);
-            alert('student id not found');
-         })
+         .then((e) => {
+            alert("UPDATE SUCCESS!!");
+            console.log("UPDATE SUSSESS:", e)
+             usenagivate("/fetch");
+             setId(({stuId:""}))
+            })
+         .catch((e) => {
+            alert("UPDATE ERROR!!")
+            console.log("UPDATE ERROR:",e)
+            });
     }
 
   return (

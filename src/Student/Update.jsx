@@ -17,21 +17,18 @@ const Update = () => {
      e.preventDefault();
      BackendApi.update(getId.stuId, getStudent)
      .then((e)=>{
-        console.log(e);
-        alert("student data updated");
+        console.log("UPDATE:",e);
+        alert("UPDATE!!");
          usenagivate("/fetch")
         setStudent({
             stuName:"",
             stuLocation:"",
-            stuCollege:""
-        })
-        setId({
-            stuId:""
-        })
+            stuCollege:""})
+        setId({stuId:""})
          usenagivate("/fetch")
      }).catch((e)=>{
-        console.log(e);
-        alert("api problem");
+        console.log("ERROR:",e);
+        alert("ERROR");
      })
     };
 
