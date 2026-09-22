@@ -12,13 +12,14 @@ const Update = () => {
             stuCollege:""
         });
 
-    const useNavigate=useNavigate();
+    const usenavigate=useNavigate();
     const handelChange=(e)=>{
      e.preventDefault();
      BackendApi.update(getId.stuId, getStudent)
      .then((e)=>{
         console.log(e);
         alert("student data updated");
+         usenavigate("/fetch")
         setStudent({
             stuName:"",
             stuLocation:"",
@@ -27,7 +28,7 @@ const Update = () => {
         setId({
             setId:""
         })
-        useNavigate("/fetch")
+       
      }).catch((e)=>{
         console.log(e);
         alert("api problem");
