@@ -23,7 +23,10 @@ const UserData = () => {
             <tr>
                 <th>Id</th>
                 <th>User Name</th>
-                <th>Password</th>
+                <th>College</th>
+                <th>Location</th>
+                <th>Delete</th>
+                <th>Update</th>
             </tr>
         </thead>
         {
@@ -34,7 +37,14 @@ const UserData = () => {
                         <tr>
                             <td>{data.stuId}</td>
                             <td>{data.stuName}</td>
-                            <td>{data.stuPass}</td>
+                            <td>{data.stuCollege}</td>
+                            <td>{data.stuLocation}</td> 
+                            <td>
+                                <Link to={`/delete/${data.stuId}`} className='btn btn-primary'>Delete</Link>
+                            </td>
+                            <td>
+                                <Link to={`/update/${data.stuId}`} className='btn btn-dark'>Update</Link>
+                            </td>
                         </tr>
 
                     </tbody>

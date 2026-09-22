@@ -1,0 +1,14 @@
+
+.ul-tag{
+ display: flex;
+ justify-content:space-evenly;
+ background-color: bisque;
+ padding: 10px;
+}
+.ul-tag li{
+    list-style: none;
+    text-decoration: none;
+}
+.ul-tag .text-type{
+    text-decoration: none;
+}

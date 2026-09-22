@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import BackendApi from '../BackEndApi/FrontEndApi.jsx'
 const UserRegister = () => {
 
-    const [getName,setName]=useState({stuName:" ", stuPass:""})
+    const [getName,setName]=useState({stuName:" ", stuPass:"",stuCollege:"", stuLocation:""})
 
     const [getSuccess, setSuccess]=useState(false);
 
@@ -19,7 +19,10 @@ const UserRegister = () => {
         console.log(req.data)
         setName({
             stuName:"",
-            stuPass:""
+            stuPass:"",
+            stuCollege:"",
+            stuLocation:""
+
         })
         setSuccess(true);
         setMsg("Registration Successful!")
@@ -42,6 +45,12 @@ const UserRegister = () => {
 
             <dt>User Password:</dt>
             <dd><input type='password' className='form-control w-50 mx-auto'  value={getName.stuPass} onChange={(event)=>{setName({...getName, stuPass: event.target.value})}} required/></dd>
+
+            <dt>User College:</dt>
+            <dd><input type='text' className='form-control w-50 mx-auto'  value={getName.stuCollege} onChange={(event)=>{setName({...getName, stuCollege: event.target.value})}} required/></dd>
+           
+            <dt>User Location:</dt>
+            <dd><input type='text' className='form-control w-50 mx-auto'  value={getName.stuLocation} onChange={(event)=>{setName({...getName, stuLocation: event.target.value})}} required/></dd>
             <button className='btn btn-danger w-50' type='submit'>Register</button>
             <p className={getSuccess==true? 'text-success' : 'text-danger'}>{getMsg}</p> 
           </dl>

@@ -2,7 +2,7 @@ import React from 'react'
 
 import axios from 'axios';
 
- const API_URL = "https://spring-6ko4.onrender.com/stu";
+ const API_URL = "http://localhost:8080/stu";
 
 class BackendApi {
 
@@ -19,7 +19,16 @@ class BackendApi {
         post(data){
             return axios.post(`${API_URL}/post`,data);
         }
- 
-}
 
+        delete(id) {
+            return axios.delete(`${API_URL}/delete/${id}`);
+       }
+
+       update(id, student)
+       {
+        return axios.put(`${API_URL}/update/${id}`,student)
+         
+       }
+
+}
 export default new BackendApi();

@@ -9,11 +9,6 @@ const UserLogin = () => {
     stuName:"",
     stuPass:""
 })
-
-  const [getSuccess, setSuccess]=useState(false);
-
-    const [getMsg,setMsg]=useState('')
-
 const {login}=userContext()
 
 const navigate=useNavigate();
@@ -30,17 +25,14 @@ const navigate=useNavigate();
             stuName:"",
             stuPass:""
         })
-         setSuccess(true);
-        setMsg("Login Successful!")
+        navigate('/dash')
+       alert("Login Successful!")
+        
      }).catch(error=>{
         console.log(error);
-         setMsg("User Login Failed")
-        setSuccess(false);
+       alert("User Login Failed")
      })
-
-
     }
-
   return (
   <>
     <form onSubmit={handelLogin}>
