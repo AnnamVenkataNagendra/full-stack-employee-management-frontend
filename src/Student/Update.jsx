@@ -25,7 +25,6 @@ const Update = () => {
             stuLocation:"",
             stuCollege:""})
         setId({stuId:""})
-         usenagivate("/fetch")
      }).catch((e)=>{
         console.log("ERROR:",e);
         alert("ERROR");
