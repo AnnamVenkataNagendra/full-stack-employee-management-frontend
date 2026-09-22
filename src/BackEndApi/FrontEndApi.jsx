@@ -27,13 +27,24 @@ class BackendApi {
             return axios.post(`${API_URL}/post`,data);
         }
 
-        delete(id) {
-            return axios.delete(`${API_URL}/delete/${id}`);
-       }
+      delete(id) {
+        const token = localStorage.getItem("login");
+
+        return axios.delete(`${API_URL}/delete/${id}`, {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    });
+}
 
        update(id, student)
        {
-        return axios.put(`${API_URL}/update/${id}`,student)
+        const token = localStorage.getItem("login");
+        return axios.put(`${API_URL}/update/${id}`,student,{
+             headers: {
+            Authorization: `Bearer ${token}`
+        }
+        })
          
        }
 
