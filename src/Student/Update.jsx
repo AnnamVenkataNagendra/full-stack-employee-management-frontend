@@ -33,9 +33,6 @@ const Update = () => {
         console.log(e);
         alert("api problem");
      })
-     .finally(()=>{
-        usenavigate("/fetch");
-     })
     };
 
   return (
