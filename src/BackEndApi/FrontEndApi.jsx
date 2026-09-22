@@ -15,6 +15,8 @@ class BackendApi {
        retrive() {
              const token = localStorage.getItem("login");
 
+             console.log(token);
+
               return axios.get(`${API_URL}/fetch`, {
                  headers: {
                       Authorization: `Bearer ${token}`
