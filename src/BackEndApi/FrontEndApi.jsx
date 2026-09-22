@@ -12,9 +12,14 @@ class BackendApi {
 
         }
 
-        retrive(){
-            return axios.get(`${API_URL}/fetch`);
-        }
+       retrive() {
+             const token = localStorage.getItem("token");
+
+              return axios.get(`${API_URL}/fetch`, {
+                 headers: {
+                      Authorization: `Bearer ${token}`
+                        }
+                  });}
 
         post(data){
             return axios.post(`${API_URL}/post`,data);
