@@ -26,7 +26,7 @@ const Update = () => {
             stuCollege:""
         })
         setId({
-            setId:""
+            stuId:""
         })
        
      }).catch((e)=>{
