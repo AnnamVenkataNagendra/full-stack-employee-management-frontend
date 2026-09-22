@@ -35,7 +35,7 @@ class BackendApi {
             Authorization: `Bearer ${token}`
         }
     });
-}
+      }
 
        update(id, student)
        {

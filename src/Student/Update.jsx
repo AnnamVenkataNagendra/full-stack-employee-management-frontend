@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react'
 import BackendApi from '../BackEndApi/FrontEndApi.jsx';
+import { useNavigate } from 'react-router-dom';
 const Update = () => {
 
      
@@ -11,6 +12,7 @@ const Update = () => {
             stuCollege:""
         });
 
+    const useNavigate=useNavigate();
     const handelChange=(e)=>{
      e.preventDefault();
      BackendApi.update(getId.stuId, getStudent)
@@ -25,6 +27,7 @@ const Update = () => {
         setId({
             setId:""
         })
+        useNavigate("/fetch")
      }).catch((e)=>{
         console.log(e);
         alert("api problem");
