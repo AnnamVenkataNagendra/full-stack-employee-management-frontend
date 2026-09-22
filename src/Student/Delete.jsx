@@ -20,7 +20,7 @@ const Delete = () => {
             console.log(e);
             alert('student id deleted');
            setId({ stuId: "" })
-           usenagivate("/")
+           usenagivate("/fetch")
          })
          .catch((e)=>{
             console.log(e);
