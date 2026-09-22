@@ -2,7 +2,7 @@ import React from 'react'
 
 import axios from 'axios';
 
- const API_URL = "http://localhost:8080/stu";
+ const API_URL = "https://full-stack-employee-management.onrender.com/stu";
 
 class BackendApi {
 
