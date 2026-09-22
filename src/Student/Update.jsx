@@ -19,7 +19,7 @@ const Update = () => {
      .then((e)=>{
         console.log(e);
         alert("student data updated");
-         usenavigate("/fetch")
+         usenagivate("/fetch")
         setStudent({
             stuName:"",
             stuLocation:"",
